@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>Web Developer Portfolio</title>
 
   <style>
@@ -8,58 +9,69 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f8fafc;
-      color: #111;
+      color: #0f172a;
+      line-height: 1.6;
     }
 
     header {
       background: #0f172a;
       color: white;
-      padding: 60px 20px;
       text-align: center;
+      padding: 70px 20px;
     }
 
     header h1 {
-      font-size: 40px;
+      font-size: 42px;
       margin: 0;
     }
 
     header p {
       font-size: 18px;
-      margin-top: 10px;
       opacity: 0.9;
+      margin-top: 10px;
     }
 
-    .cta {
-      margin-top: 20px;
-    }
-
-    button {
+    .cta button {
+      margin: 10px 5px;
       padding: 12px 18px;
       border: none;
-      background: #2563eb;
-      color: white;
       border-radius: 6px;
       cursor: pointer;
-      margin: 5px;
+      font-weight: bold;
+    }
+
+    .hire {
+      background: #2563eb;
+      color: white;
+    }
+
+    .cv {
+      background: white;
+      color: #0f172a;
     }
 
     section {
-      padding: 40px 20px;
       max-width: 900px;
       margin: auto;
+      padding: 40px 20px;
     }
 
     .card {
       background: white;
       padding: 25px;
       margin: 20px 0;
-      border-radius: 10px;
+      border-radius: 12px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
-    .highlight {
-      color: #2563eb;
-      font-weight: bold;
+    .badge {
+      display: inline-block;
+      padding: 5px 10px;
+      background: #e0f2fe;
+      color: #0369a1;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-bottom: 10px;
     }
 
     a {
@@ -69,11 +81,26 @@
     }
 
     footer {
-      text-align: center;
-      padding: 20px;
       background: #0f172a;
       color: white;
+      text-align: center;
+      padding: 20px;
       margin-top: 40px;
+    }
+
+    /* DARK MODE */
+    .dark-mode {
+      background: #0b1220;
+      color: white;
+    }
+
+    .dark-mode .card {
+      background: #1e293b;
+      color: white;
+    }
+
+    .dark-mode a {
+      color: #60a5fa;
     }
   </style>
 </head>
@@ -82,46 +109,60 @@
 
 <header>
   <h1>I Build Websites for Businesses</h1>
-  <p>Clean • Fast • Mobile-Friendly Websites that help you get customers online</p>
+  <p>Clean • Fast • Mobile-Friendly Websites that bring customers to your business</p>
 
   <div class="cta">
-    <button onclick="document.getElementById('contact').scrollIntoView()">Hire Me</button>
-    <button onclick="window.location.href='cv.html'">View CV</button>
+    <button class="hire" onclick="document.getElementById('contact').scrollIntoView()">
+      Hire Me
+    </button>
+
+    <button class="cv" onclick="window.location.href='cv.html'">
+      View CV
+    </button>
+
+    <button class="cv" onclick="toggleDarkMode()">
+      Toggle Mode
+    </button>
   </div>
 </header>
 
 <section>
 
   <div class="card">
+    <div class="badge">ABOUT</div>
     <h2>What I Do</h2>
-    <p>I design and build simple websites for <span class="highlight">boutiques, small businesses, and personal brands</span>.</p>
+    <p>I design and build simple, clean websites for small businesses, boutiques, and personal brands.</p>
   </div>
 
   <div class="card">
-    <h2>Projects</h2>
+    <div class="badge">PROJECTS</div>
+    <h2>My Work</h2>
     <p>✔ Portfolio Website</p>
-    <p>✔ Landing Page Template</p>
-    <p>✔ Business Website (coming soon)</p>
+    <p>✔ Business Landing Page</p>
+    <p>✔ E-commerce Demo (coming soon)</p>
 
     <p>
-      Live site:
+      Live project: 
       <a href="https://nathan-portfolio1.netlify.app" target="_blank">
-        View Project
+        View Site
       </a>
     </p>
   </div>
 
-  <div class="card" id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: ishaya Nathan@email.com</p>
-    <p>WhatsApp: 08109917257</p>
-  </div>
-
   <div class="card">
-    <h2>Why Work With Me?</h2>
+    <div class="badge">WHY ME</div>
+    <h2>Why Clients Choose Me</h2>
     <p>✔ Affordable pricing</p>
     <p>✔ Fast delivery</p>
     <p>✔ Clean modern design</p>
+    <p>✔ Mobile-friendly websites</p>
+  </div>
+
+  <div class="card" id="contact">
+    <div class="badge">CONTACT</div>
+    <h2>Let’s Work Together</h2>
+    <p>Email: Ishayanathaniel@email.com</p>
+    <p>WhatsApp: 08109917257</p>
   </div>
 
 </section>
@@ -129,6 +170,12 @@
 <footer>
   © 2026 Your Name | Web Developer
 </footer>
+
+<script>
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
+}
+</script>
 
 </body>
 </html>
