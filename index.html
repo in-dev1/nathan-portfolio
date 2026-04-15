@@ -1,182 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ishaya Nathan - Frontend Developer</title>
+  <title>Web Developer Portfolio</title>
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #e0f2fe, #ffffff);
-      transition: 0.3s;
+      background: #f8fafc;
+      color: #111;
     }
 
-    /* NAVBAR */
-    nav {
-      background: #111827;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      padding: 15px 20px;
-      align-items: center;
-    }
-
-    nav a {
-      color: white;
-      margin-left: 15px;
-      text-decoration: none;
-    }
-
-    /* HEADER */
     header {
+      background: #0f172a;
+      color: white;
+      padding: 60px 20px;
       text-align: center;
-      padding: 40px 20px;
     }
 
-    /* CARDS */
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 20px;
+    header h1 {
+      font-size: 40px;
+      margin: 0;
     }
 
-    .card {
-      background: white;
-      width: 300px;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: 0.3s;
+    header p {
+      font-size: 18px;
+      margin-top: 10px;
+      opacity: 0.9;
     }
 
-    /* BUTTON */
-    button, .btn {
-      padding: 10px 15px;
+    .cta {
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 12px 18px;
       border: none;
       background: #2563eb;
       color: white;
       border-radius: 6px;
       cursor: pointer;
-      margin-top: 10px;
+      margin: 5px;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .highlight {
+      color: #2563eb;
+      font-weight: bold;
+    }
+
+    a {
+      color: #2563eb;
       text-decoration: none;
-      display: inline-block;
+      font-weight: bold;
     }
 
-    /* ABOUT ANIMATION (subtle) */
-    #about {
-      display: inline-block;
-      transition: 0.3s;
-    }
-
-    #about:hover {
-      transform: translateY(-3px);
-    }
-
-    /* DARK MODE */
-    .dark-mode {
+    footer {
+      text-align: center;
+      padding: 20px;
       background: #0f172a;
       color: white;
-    }
-
-    .dark-mode .card {
-      background: #1e293b;
-      color: white;
-    }
-
-    .dark-mode nav {
-      background: #000;
-    }
-
-    /* RESPONSIVE */
-    @media (max-width: 600px) {
-      .card {
-        width: 90%;
-      }
+      margin-top: 40px;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- NAV -->
-  <nav>
-    <div><b>Nathan Dev</b></div>
-    <div>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
+<header>
+  <h1>I Build Websites for Businesses</h1>
+  <p>Clean • Fast • Mobile-Friendly Websites that help you get customers online</p>
 
-  <!-- HEADER -->
-  <header>
-    <h1>Ishaya Nathan</h1>
-    <p>Frontend Developer</p>
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-  </header>
+  <div class="cta">
+    <button onclick="document.getElementById('contact').scrollIntoView()">Hire Me</button>
+    <button onclick="window.location.href='cv.html'">View CV</button>
+  </div>
+</header>
 
-  <!-- CONTENT -->
-  <div class="container">
+<section>
 
-    <div class="card" id="about">
-      <h2>About Me</h2>
-      <p id="aboutText">
-        I am learning frontend development and building real projects.
-      </p>
-      <button onclick="changeAbout()">Update About</button>
-    </div>
-
-    <div class="card" id="projects">
-      <h2>Projects</h2>
-      <p>✔ Portfolio Website</p>
-
-      <a class="btn" href="https://nathan-portfolio1.netlify.app" target="_blank">
-        View Live Site
-      </a>
-    </div>
-
-    <div class="card">
-      <h2>Download CV</h2>
-      <a class="btn" href="cv.html" target="_blank">Download CV</a>
-    </div>
-
-    <div class="card" id="contact">
-      <h2>Contact</h2>
-      <p>Email: ishayanathaniel@gmail.com</p>
-    </div>
-
+  <div class="card">
+    <h2>What I Do</h2>
+    <p>I design and build simple websites for <span class="highlight">boutiques, small businesses, and personal brands</span>.</p>
   </div>
 
-  <script>
-    // ABOUT TEXT CHANGE
-    function changeAbout() {
-      document.getElementById("aboutText").innerText =
-        "I am improving my frontend skills and building real-world projects daily!";
-    }
+  <div class="card">
+    <h2>Projects</h2>
+    <p>✔ Portfolio Website</p>
+    <p>✔ Landing Page Template</p>
+    <p>✔ Business Website (coming soon)</p>
 
-    // DARK MODE WITH MEMORY
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
+    <p>
+      Live site:
+      <a href="https://nathan-portfolio1.netlify.app" target="_blank">
+        View Project
+      </a>
+    </p>
+  </div>
 
-      if (document.body.classList.contains("dark-mode")) {
-        localStorage.setItem("theme", "dark");
-      } else {
-        localStorage.setItem("theme", "light");
-      }
-    }
+  <div class="card" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: ishaya Nathan@email.com</p>
+    <p>WhatsApp: 08109917257</p>
+  </div>
 
-    // LOAD SAVED THEME
-    window.onload = function () {
-      if (localStorage.getItem("theme") === "dark") {
-        document.body.classList.add("dark-mode");
-      }
-    };
-  </script>
+  <div class="card">
+    <h2>Why Work With Me?</h2>
+    <p>✔ Affordable pricing</p>
+    <p>✔ Fast delivery</p>
+    <p>✔ Clean modern design</p>
+  </div>
+
+</section>
+
+<footer>
+  © 2026 Your Name | Web Developer
+</footer>
 
 </body>
 </html>
