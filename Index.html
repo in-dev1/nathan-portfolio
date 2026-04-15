@@ -7,28 +7,14 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #e0f2fe, #ffffff);
-      padding-bottom: 40px;
-      animation: fadeIn 1s ease-in;
-      transition: 0.3s;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+      background: linear-gradient(to right, #dfe9f3, #ffffff);
     }
 
     header {
-      background: linear-gradient(135deg, #111827, #1f2937);
+      background: #111827;
       color: white;
       text-align: center;
-      padding: 35px 15px;
-      animation: slideDown 1s ease-out;
-    }
-
-    @keyframes slideDown {
-      from { transform: translateY(-30px); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
+      padding: 30px 15px;
     }
 
     .profile {
@@ -52,23 +38,12 @@
 
     .card {
       background: white;
-      margin: 20px auto;
-      padding: 25px;
+      margin: 15px auto;
+      padding: 22px;
       max-width: 420px;
       border-radius: 14px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
       text-align: center;
-      transition: transform 0.3s ease;
-      animation: popUp 0.8s ease;
-    }
-
-    @keyframes popUp {
-      from { transform: scale(0.9); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-
-    .card:hover {
-      transform: scale(1.03);
     }
 
     button {
@@ -77,39 +52,6 @@
       background: #2563eb;
       color: white;
       border-radius: 6px;
-      cursor: pointer;
-      margin: 5px;
-      transition: 0.3s;
-    }
-
-    button:hover {
-      background: #1e40af;
-      transform: scale(1.05);
-    }
-
-    a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* DARK MODE */
-    .dark-mode {
-      background: #0f172a;
-      color: white;
-    }
-
-    .dark-mode .card {
-      background: #1e293b;
-      color: white;
-    }
-
-    .dark-mode a {
-      color: #60a5fa;
     }
   </style>
 </head>
@@ -118,23 +60,20 @@
 
   <header>
     <div class="profile">IN</div>
-
-    <h1>Your Name</h1>
+    <h1>Ishaya Nathan</h1>
     <p>Aspiring Frontend Developer</p>
-
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
   </header>
 
   <section>
 
     <div class="card">
       <h2>About Me</h2>
-
       <p id="about">
-        I am building frontend development skills using HTML, CSS, and JavaScript. I enjoy creating simple but functional web projects.
+        I am learning web development step by step using HTML, CSS, and JavaScript.
       </p>
 
       <button onclick="changeAbout()">Update About</button>
+      <br><br>
       <button onclick="alert('CV feature coming soon')">Download CV</button>
     </div>
 
@@ -145,35 +84,14 @@
 
     <div class="card">
       <h2>My Projects</h2>
-
       <p>✔ Profile Page</p>
-      <p>✔ Portfolio Website (Live)</p>
-
-      <p>
-        <a href="https://nathan-web-2026.netlify.app" target="_blank">
-          View Live Project
-        </a>
-      </p>
+      <p>✔ Portfolio Website</p>
     </div>
 
     <div class="card">
       <h2>Contact Me</h2>
-
-      <p>
-        📞 WhatsApp:
-        <a href="https://wa.me/2348109917257" target="_blank">Chat with me</a>
-      </p>
-
-      <p>
-        📧 Email:
-        <a href="mailto: ishayanathaniel@gmail.com@email.com">Send Email</a>
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>Hire Me</h2>
-      <p>I build simple websites for small businesses and personal brands.</p>
-      <p><b>Available for freelance work</b></p>
+      <p>📞 WhatsApp: +234 810 991 7257</p>
+      <p>📧 Email: ishayanathaniel@email.com</p>
     </div>
 
   </section>
@@ -183,14 +101,6 @@
       document.getElementById("about").innerText =
         "I am actively building real frontend projects and improving daily!";
     }
-
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
-
-    window.onload = function () {
-      console.log("Portfolio loaded successfully 🚀");
-    };
   </script>
 
 </body>
